@@ -1,1 +1,4 @@
-
+el_user_friend:
+    path: /friend
+    defaults:
+          _controller: ELUserBundle:User:friend

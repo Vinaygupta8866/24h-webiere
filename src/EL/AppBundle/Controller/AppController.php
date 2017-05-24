@@ -15,13 +15,15 @@ class AppController extends Controller
         $user = new User();
         $user = $this->getUser();
 
+        if($user != null) {
+            $user->setBiereFavorite(null);
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
+        }
 
 
-        $user->setBiereFavorite(null);
-
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($user);
-        $em->flush();
 
         return $this->render('ELAppBundle:App:index.html.twig', array(
             'user'   => $user,
