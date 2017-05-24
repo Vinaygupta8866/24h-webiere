@@ -1,0 +1,19 @@
+el_app_homepage:
+    path:     /
+    defaults: { _controller: ELAppBundle:App:index }
+
+el_app_biere_view:
+    path:     /biere/view/{id}
+    defaults:
+        _controller: ELAppBundle:Biere:view
+
+el_app_biere_edit:
+    path:     /biere/edit/{id}
+    defaults:
+        _controller: ELAppBundle:Biere:edit
+
+el_app_biere_add:
+    path:     /biere/add
+    defaults:
+        _controller: ELAppBundle:Biere:add
+

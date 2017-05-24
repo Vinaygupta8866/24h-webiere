@@ -1,0 +1,31 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset("css/style.css") }}">
+{% endblock %}
+{% block body %}
+    <div class="conteneur">
+
+
+        <div class="menu">
+            <img src="https://image.flaticon.com/icons/svg/236/236832.svg" class="avatar">
+            <img class="home" src="https://image.flaticon.com/icons/svg/263/263115.svg">
+            <div class="name">{{ user.username | capitalize }}</div>
+            <input type="text" class="recherche" placeholder="Rechercher biere/utilisateur" list="list">
+            <datalist id="list">
+                {% for biere in bieres %}
+                <option value="{{ biere.nom }}">
+
+                {% endfor %}
+            </datalist>
+
+        </div>
+        <div class="contenu">
+            <div class="biere">
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

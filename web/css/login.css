@@ -1,0 +1,84 @@
+html,body {
+    /* suppression des éventuels styles par défaut */
+    margin:0;
+    padding:0;
+    background-color: #bbb;
+
+
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.biere {
+    position: relative;
+    display: block;
+    margin-top: 50vh;
+    height: 500px;
+    background: url("../img/biere.svg");
+    background-repeat: no-repeat;
+    margin: auto;
+    max-width: 500px;
+
+    margin:auto;
+    margin-top: 15vh;
+
+    /* on le rend visible */
+}
+
+
+form {
+    position: absolute;
+    width: 100%;
+    height:100%;
+
+
+}
+.input {
+   position: absolute;
+    /*margin-bottom: 5%;*/
+
+
+
+    left: 20%;
+
+    border: 0px;
+    border-radius: 3px;
+
+    padding: 1.5%;
+
+
+}
+
+.mail {
+
+top:55%;
+
+}
+.pwd {
+    top:65%;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.connexion {
+    position: absolute;
+    top:80%;
+    width: 25%;
+    left: 25%;
+    border: 1px solid #aaa;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #555;
+    background-color: white;
+    border-radius: 3px;
+
+}
+.connexion:focus {
+    outline: none;
+    border: 1px solid #777;
+}
