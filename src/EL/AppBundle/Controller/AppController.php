@@ -5,9 +5,14 @@ namespace EL\AppBundle\Controller;
 use EL\AppBundle\Entity\Biere;
 use EL\UserBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class AppController extends Controller
 {
+
+    /**
+     * @Security("has_role('ROLE_USER')")
+     */
     public function indexAction()
     {
         $repoBiere = $this->getDoctrine()->getManager()->getRepository('ELAppBundle:Biere');

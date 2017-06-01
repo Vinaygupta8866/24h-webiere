@@ -50,7 +50,6 @@ a  {
     box-sizing: border-box;
     border-right: 2px solid #aaa;
     background-color: #f4a83b;
-
     transition: left 1s;
 
 
@@ -66,6 +65,7 @@ a  {
     box-sizing: border-box;
     top: 25px;
     left: 80px;
+
 
 
 }
@@ -170,7 +170,7 @@ a  {
 
 .fleche:checked + .menu{
 
-    z-index: 1000;
+
     left:-250px;
 
 
@@ -178,7 +178,7 @@ a  {
 
 .fleche:checked ~ .menu2{
 
-    z-index: 1001;
+
     left:0px;
 
 
@@ -247,6 +247,9 @@ a  {
     padding: 5px 0;
     background-color: #f4a83b;
     transition: left 0.5s;
+    box-sizing: border-box;
+    border-right: 1px solid #aaa;
+    transition-delay: 1s;
 
 }
 

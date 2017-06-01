@@ -7,9 +7,13 @@ use EL\AppBundle\Form\BiereType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class BiereController extends Controller
 {
+    /**
+     * @Security("has_role('ROLE_USER')")
+     */
     public function viewAction($id)
     {
         $biere = new Biere();
@@ -25,6 +29,9 @@ class BiereController extends Controller
 
     }
 
+    /**
+     * @Security("has_role('ROLE_USER')")
+     */
     public function editAction($id, Request $request)
     {
         $biere = new Biere();
@@ -48,6 +55,9 @@ class BiereController extends Controller
         return $this->render('ELAppBundle:Biere:edit.html.twig', array('form' => $form->createView(),));
     }
 
+    /**
+     * @Security("has_role('ROLE_USER')")
+     */
     public function addAction(Request $request)
     {
         $biere = new Biere();

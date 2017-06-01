@@ -33,6 +33,7 @@ class Biere
      * @var string
      *
      * @ORM\Column(name="type", type="string", length=255)
+     * unique=true
      */
     private $type;
 
